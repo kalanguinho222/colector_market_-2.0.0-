@@ -1,0 +1,75 @@
+/* bagulho que adapita pra diferentes telas :p */
+
+@media(max-width: 1024px) {
+
+    .container {
+
+        padding: 20px;
+    }
+
+    .container h1 {
+
+        text-align: center;
+    }
+
+    .container .filtros {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .container .filtros .categorias-cartas {
+
+        width: 65%;
+    }
+}
+
+@media(max-width: 480px) {
+
+    .container .filtros .categorias-cartas, .container .filtros .preco-cartas, .container .filtros .btn-comprar {
+
+        width: 100%;
+    }
+}
+@media(max-width: 1500px) {
+
+    
+
+    .container-bemvindo {
+        top:4.5vw;
+        left:40vw;
+    }
+
+    .img-urutau {
+        top:9.3vw;
+        left:10vw;
+    }
+
+    .img-bemtevi {
+        top:7.5vw;
+        left:23vw;
+    }
+
+    .img-sangue-de-boi {
+        top:7.5vw;
+        left:54.5vw;
+    }
+
+    .img-aguiacareca {
+        top:9.3vw;
+        left:70vw;
+    }
+
+    .container-login{
+        top:4.5vw;
+        left:40vw;
+    }
+
+    .container-cadastro{
+        top:4.5vw;
+        left:40vw;
+    }
+
+}

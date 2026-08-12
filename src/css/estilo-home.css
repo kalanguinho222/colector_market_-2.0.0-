@@ -1,0 +1,228 @@
+.body-home {
+    
+
+    background: linear-gradient(160deg, rgb(16, 0, 107), rgba(83, 0, 192, 0.801));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.container-bemvindo {
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    min-width: 320px;
+    height:550px;
+    transition: 1s;
+    border-radius: 45px;
+    border: 2px solid #9308d4c9;
+    box-shadow: 6px 3px 10px rgba(0, 0, 0, 0.267);
+    background: linear-gradient(160deg, rgb(15, 0, 80), rgb(15, 15, 15));
+
+    position: absolute;
+
+    top:9vw;
+    left:42vw;
+
+    flex-grow: 1;
+
+    z-index: 3;
+
+
+}
+
+.container-bemvindo:hover {
+
+    transform: translateY(-4px);
+    box-shadow: 0px 4px 10px rgba(255, 0, 234, 0.452);
+
+}
+
+.h1-bemvindo {
+
+    font-size: 40px;
+    color: rgb(174, 0, 255);
+    font-weight: 500;
+    font-family:cursive;
+    margin-bottom: 5px;
+    
+
+}
+
+.h1-bemvindo-birdiepedia {
+
+    font-size: 40px;
+    color: rgb(195, 0, 255);
+    font-weight: 10;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
+    margin-bottom: 60px;
+
+}
+
+.btn-link-sigin {
+
+    border-radius: 20px;
+    border: 2px solid ;
+    border-color: #9408d4;
+
+    background: linear-gradient(160deg,rgb(119, 7, 194), rgba(218, 2, 189, 0.801));
+    color: #ededed;
+
+    padding: 1px 32px;
+    font-weight: 500;
+    justify-content: center;
+    align-self: center;
+
+    width: 190px;
+    height: 30px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin: 8px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.btn-link-login{
+
+    border-radius: 20px;
+    border: 2px solid ;
+    border-color: #9408d4;
+
+    background: linear-gradient(160deg,rgb(119, 7, 194), rgba(218, 2, 189, 0.801));
+    color: #ededed;
+
+    padding: 1px 32px;
+    font-weight: 500;
+    justify-content: center;
+    align-self: center;
+
+    width: 160px;
+    height: 30px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin: 8px;
+    margin-bottom: 60px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+
+
+}
+.btn-link-home{
+
+    border-radius: 20px;
+    border: 2px solid ;
+    border-color: #9408d4;
+
+    background: linear-gradient(160deg,rgb(119, 7, 194), rgba(218, 2, 189, 0.801));
+    color: #ededed;
+
+    padding: 1px 32px;
+    font-weight: 500;
+    justify-content: center;
+    align-self: center;
+
+    width: 110px;
+    height: 30px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin: 8px;
+    margin-bottom: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-link-login:hover, .btn-link-sigin:hover, .btn-link-home:hover {
+
+    background: linear-gradient(160deg,rgb(81, 5, 133), rgba(148, 1, 128, 0.801));
+    box-shadow: 4px 3px 10px rgba(175, 2, 255, 0.685);
+
+    transform: translateY(-2px);
+
+}
+
+.img-urutau, .img-aguiacareca {
+
+    width: 320px;
+    height: 420px;
+    border-radius: 40px;
+    transition: 0.9s;
+    border: 2px solid #ffffff75;
+
+
+}
+
+.img-bemtevi, .img-sangue-de-boi{
+
+    width: 370px;
+    height: 470px;
+    border-radius: 40px;
+    transition: 0.9s;
+    border: 2px solid #ffffff67;
+
+
+}
+
+.img-bemtevi {
+
+
+    position: absolute;
+    align-self: center;
+    top:11vw;
+    left:25vw;
+    
+    z-index: 2;
+    flex-grow: 1;
+
+}
+
+.img-sangue-de-boi {
+
+    flex-grow: 1;
+    position: absolute;
+    align-self: center;
+    top:11vw;
+    left:56.5vw;
+    
+    z-index: 2;
+}
+
+.img-urutau {
+
+    flex-grow: 1;
+    position: absolute;
+    align-self: center;
+    top:12.3vw;
+    left:12vw;
+    
+    z-index: 1;
+}
+
+.img-aguiacareca {
+
+    flex-grow: 1;
+    position: absolute;
+    align-self: center;
+    top:12.3vw;
+    left:72vw;
+    
+    z-index: 1;
+}
+
+.img-urutau:hover, .img-aguiacareca:hover, .img-bemtevi:hover, .img-sangue-de-boi:hover {
+
+    transform: translateY(-4px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.425);
+
+}

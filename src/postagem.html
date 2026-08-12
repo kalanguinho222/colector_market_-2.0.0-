@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>postagem</title>
+
+    <link rel="icon" href="./imagens/imgs-ex/iconedaba-cmarket.png">
+
+    <link rel="stylesheet" href="css/postagem.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/responsivo.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+</head>
+<body class="body-postagem">
+
+    <div class="container-postagem">
+        
+
+        <div class="container-input-img">
+            <label for="img" class="btn-label"> <span class="span-img">
+                &#8682;</span>
+                
+                Selecionar Imagem
+            </label>
+            <input type="file" accept="image/*" class="input-img" id="img" name="img" style="display: none;">
+        </div>
+        
+        <div class="container-inputs">
+
+            <h1 class="h1-titulo">Crie um novo produto:</h1>
+            
+            <label for="nome" class="label">Nome:</label>
+            <input type="text" name="nome" placeholder="Nome do produto" class="input-nome">
+            <label for="preco" class="label">Preço:</label>
+            <input type="number" name="preco" placeholder="Preço do produto" class="input-preco " id="preco" step="0.01" min="0">
+
+            <label for="categoria" class="label">Categoria:</label>
+            <select id="categoria" class="categorias">
+
+                <option value="">
+                    Selecione Uma categoria
+                </option>
+
+                <option value="pokemon">
+                    pokemon
+                </option>
+
+                <option value="yugioh">
+                    yugioh
+                </option>
+
+                <option value="magic">
+                    magic
+                </option>
+
+                <option value="colecionaveis">
+                    items colecionaveis
+                </option>
+
+            </select>
+
+            <button type="submit" class="btn-postagem"> postar </button>
+
+            <button onclick="location.href='home.html'" class="btn-link-home">
+                voltar
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>

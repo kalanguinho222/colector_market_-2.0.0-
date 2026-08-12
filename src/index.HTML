@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Colector Market
+    </title>
+
+    <link rel="icon" href="./imagens/imgs-ex/iconedaba-cmarket.png">
+
+ <!-- Fontes :3 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
+  <!-- CSS ;3c-->
+
+    <link rel="stylesheet" href=" ./css/reset.css">
+    <link rel="stylesheet" href=" ./css/estilos.css">
+    <link rel="stylesheet" href="./css/responsivo.css">
+
+</head>
+
+<body>
+
+    
+   <!-- imagen do cabesario / titulo :0 -->
+
+    <header class="cabecalho">
+        <img src="./imagens/imgs-ex/logo.png" alt="logo magick AI">
+        
+    </header>
+
+  <!-- categoria e filtros >:3 -->
+
+    <button onclick="location.href='home.html'" class="btn-link-config">
+        <img src="./imagens/imgs-ex/btn-config-img.png" alt="Configurações" class="img-config">
+    </button>
+
+    <main class="container">
+
+        
+        <h1 class="produtos"> Produtos </h1>
+
+        <!-- filtro de rarides :j-->
+
+        <div class="filtros">
+
+            <label id="categorias"> Categoria  
+            </label>
+
+           <!-- raridade ;D-->
+
+            <select id="categoria" class="categorias">
+
+                <option value="">
+                    Selecione Uma Categoria
+                </option>
+
+                <option value="pokemon">
+                    cartas pokemon
+                </option>
+
+                <option value="yugioh">
+                    cartas de yugioh
+                </option>
+
+                <option value="magic">
+                    cartas de magic
+                </option>
+
+                <option value="colecionaveis">
+                    items colecionaveis
+                </option>
+
+            </select>
+
+        </div>
+
+
+       <!-- filtro de preco -->
+
+        <div class="preco-cartas">
+
+            <label for="preco"> Preço Máximo (R$)</label>
+
+            <input type="text" id="preco" class="input-preco">
+
+        </div>
+
+       <!-- butão de filtro -->
+
+        <button class="btn-filtrar"> 
+            Aplicar filtros 
+        </button>
+
+        <!-- CARTAS ;3 -->
+    
+        <ul class="cartas">
+
+            <!-- carta do charizard -->
+
+            <li class="carta" data-categoria="pokemon" data-preco="5000">
+
+                <img src="./imagens/imgs-ex/charizard.jpg" alt="Charizard" class="img-carta" />
+
+                <div class="informacoes">
+                    <h2 class="nome-personagem">
+                     charizard 1st edition
+                    </h2>
+                    <span class="categoria">
+                        Categoria: Pokemon
+                    </span>
+                    <span class="preco"> R$ 5.000,00 </span>
+
+                    <button class="btn-comprar">
+                        comprar
+                    </button>
+
+                </div>
+
+            </li>
+
+            <!-- carta do pikachu -->
+
+            <li class="carta" data-categoria="pokemon" data-preco="3000">
+
+                <img src="./imagens/imgs-ex/pikachu.jpg" alt="Pikachu" class="img-carta" />
+
+                <div class="informacoes">
+
+                    <h2 class="nome-personagem">
+                        pikachu original jungle
+                    </h2>
+                    <span class="categoria">
+                        Categoria: Pokemon
+                    </span>
+                    <span class="preco">
+                        R$ 3.000,00
+                    </span>
+                    <button class="btn-comprar">
+                        Comprar
+                    </button>
+
+                </div>
+            </li>
+
+            <!-- carta do pikachu2 -->
+
+            <li class="carta" data-categoria="pokemon" data-preco="800">
+
+                <img src="./imagens/imgs-ex/pikachu2.jpg" alt="Pikachu2" class="img-carta" />
+
+                <div class="informacoes">
+
+                    <h2 class="nome-personagem">
+                        Pikachu reversed holo
+                    </h2>
+                    <span class="categoria">
+                        Categoria: pokemon
+                    </span>
+                    <span class="preco">
+                        R$ 800,00
+                    </span>
+                    <button class="btn-comprar">
+                        Comprar
+                    </button>
+
+                </div>
+            </li>
+
+            <!-- carta do snorlax-->
+
+            <li class="carta" data-categoria="pokemon" data-preco="1500">
+
+                <img src="./imagens/imgs-ex/snorlax.jpg" alt="Snorlax" class="img-carta" />
+
+                <div class="informacoes">
+
+                    <h2 class="nome-personagem">
+                        snorlax 1st edition
+                    </h2>
+                    <span class="categoria">
+                        Categoria: pokemon
+                    </span>
+                    <span class="preco">
+                        R$ 1.500,00
+                    </span>
+                    <button class="btn-comprar">
+                        Comprar
+                    </button>
+
+                </div>
+
+            </li>
+
+            <!-- carta do raichu-->
+
+            <li class="carta" data-categoria="pokemon" data-preco="2000">
+
+                <img src="./imagens/imgs-ex/raichu.png" alt="Raichu" class="img-carta"/>
+
+                <div class="informacoes">
+
+                    <h2 class="nome-personagem">
+                        Raichu 1st edition
+                    </h2>
+                    <span class="categoria">
+                        Categoria: pokemon
+                    </span>
+                    <span class="preco">
+                        R$ 2.000,00
+                    </span>
+                    <button class="btn-comprar">
+                        Comprar
+                    </button>
+
+                </div>
+
+            </li>
+
+            <!-- carta do latia e latios -->
+
+            <li class="carta" data-categoria="pokemon" data-preco="4000">
+
+                <img src="./imagens/imgs-ex/latias-e-latios.jpg" alt="Raichu" class="img-carta"/>
+
+                <div class="informacoes">
+
+                    <h2 class="nome-personagem">
+                        latias e latios gx
+                    </h2>
+                    <span class="categoria">
+                        Categoria: pokemon
+                    </span>
+                    <span class="preco">
+                        R$ 4.000,00
+                    </span>
+                    <button class="btn-comprar">
+                        Comprar
+                    </button>
+
+                </div>
+
+            </li>
+
+
+            <!-- carta do blue eyes white dragon-->
+
+            <li class="carta" data-categoria="yugioh" data-preco="500">
+
+                <img src="./imagens/imgs-ex/blue-eyes-white-dragon.webp" alt="Blue Eyes White Dragon" class="img-carta"/>
+
+                <div class="informacoes">
+
+                    <h2 class="nome-personagem">
+                        Blue Eyes White Dragon
+                    </h2>
+                    <span class="categoria">
+                        Categoria: yugioh
+                    </span>
+
+                    <span class="preco">
+                        R$ 500,00
+                    </span>
+
+                    <button class="btn-comprar">
+                        Comprar
+                    </button>
+
+                </div>
+
+            </li>
+
+            <!-- carta do red-eye black dragon-->
+
+            <li class="carta" data-categoria="yugioh" data-preco="1500">
+
+                <img src="./imagens/imgs-ex/red-eye-b-dragon.jpg" alt="Red-Eye Black Dragon" class="img-carta"/>
+
+                <div class="informacoes">
+
+                    <h2 class="nome-personagem">
+                        Red-Eye Black Dragon
+                    </h2>
+                    <span class="categoria">
+                        Categoria: yugioh
+                    </span>
+                    <span class="preco">
+                        R$ 1.500,00
+                    </span>
+                    <button class="btn-comprar">
+                        Comprar
+                    </button>
+
+                </div>
+
+            </li>
+
+            <!-- carta do black luster soldier-->
+            
+            <li class="carta" data-categoria="yugioh" data-preco="750">
+
+                <img src="./imagens/imgs-ex/black-luster.jpg" alt="Black Luster Soldier" class="img-carta"/>
+
+                <div class="informacoes">
+
+                    <h2 class="nome-personagem">
+                        black luster soldier
+                    </h2>
+                    <span class="categoria">
+                        Categoria: yugioh
+                    </span>
+                    <span class="preco">
+                        R$ 750,00
+                    </span>
+                    <button class="btn-comprar">
+                        Comprar
+                    </button>
+
+                </div>
+
+            </li>
+
+            <!-- carta do dark magician-->
+            
+            <li class="carta" data-categoria="magic" data-preco="1200">
+
+                <img src="./imagens/imgs-ex/dark-magician.jpg" alt="Dark Magician" class="img-carta"/>
+
+                <div class="informacoes">
+
+                    <h2 class="nome-personagem">
+                        dark magician
+                    </h2>
+                    <span class="categoria">
+                        Categoria: magic
+                    </span>
+                    <span class="preco">
+                        R$ 1.200,00
+                    </span>
+                    <button class="btn-comprar">
+                        Comprar
+                    </button>
+
+                </div>
+
+            </li>
+
+            <!-- carta do phoenix heart-->
+
+            <li class="carta" data-categoria="magic" data-preco="900">
+
+                <img src="./imagens/imgs-ex/phoenix-heart.webp" alt="Phoenix Heart" class="img-carta"/>
+
+                <div class="informacoes">
+
+                    <h2 class="nome-personagem">
+                        Phoenix Heart
+                    </h2>
+                    <span class="categoria">
+                        Categoria: magic
+                    </span>
+                    <span class="preco">
+                        R$ 900,00
+                    </span>
+                    <button class="btn-comprar">
+                        Comprar
+                    </button>
+
+                </div>
+
+            </li>
+            
+            <!-- carta do splendid genisis -->
+
+            <li class="carta" data-categoria="magic" data-preco="2200">
+
+                 <img src="./imagens/imgs-ex/splendid-genisis.jpg" alt="Splendid Genisis" class="img-carta"/>
+
+                 <div class="informacoes">
+
+                    <h2 class="nome-personagem">
+                        splendid genisis assin
+                    </h2>
+                    <span class="categoria">
+                        Categoria: magic
+                    </span>
+                    <span class="preco">
+                        R$ 2.200,00
+                    </span>
+                    <button class="btn-comprar">
+                        Comprar
+                    </button>
+
+                </div>
+
+            </li>
+
+            <!-- carta do time twister -->
+
+            <li class="carta" data-categoria="magic" data-preco="400">
+
+                <img src="./imagens/imgs-ex/time-twister.jpg" alt="Time Twister" class="img-carta"/>
+
+                <div class="informacoes">
+
+                    <h2 class="nome-personagem">
+                        Time Twister
+                    </h2>
+                    <span class="categoria">
+                        Categoria: magic
+                    </span>
+                    <span class="preco">
+                        R$ 400,00
+                    </span>
+                    <button class="btn-comprar">
+                        Comprar
+                    </button>
+
+                </div>
+
+            </li>
+
+            <!-- controle xbox halo -->
+            
+            <li class="carta" data-categoria="colecionaveis" data-preco="800">
+
+                <img src="./imagens/imgs-ex/controle-xbox-halo.jpg" alt="Controle Xbox Halo" class="img-carta"/>
+
+                <div class="informacoes">
+
+                    <h2 class="nome-personagem">
+                        Controle Xbox Halo
+                    </h2>
+                    <span class="categoria">
+                        Categoria: colecionaveis
+                    </span>
+                    <span class="preco">
+                        R$ 800,00
+                    </span>
+                    <button class="btn-comprar">
+                        Comprar
+                    </button>
+
+                </div>
+
+            </li>
+
+            <!-- controle nintendo 64 -->
+
+            <li class="carta" data-categoria="colecionaveis" data-preco="200">
+
+             <img src="./imagens/imgs-ex/controle-nintendo-64.jpg" alt="Controle Nintendo 64" class="img-carta"/>
+
+                <div class="informacoes">
+
+                 <h2 class="nome-personagem">
+                     Controle nintendo 64
+                 </h2>
+                 <span class="categoria">
+                     Categoria: colecionaveis
+                 </span>
+                    <span class="preco">
+                       R$ 200,00
+                  </span>
+                    <button class="btn-comprar">
+                       Comprar
+                    </button>
+
+                </div>
+
+            </li>
+
+            <!-- golden nintendo 64 -->
+
+            <li class="carta" data-categoria="colecionaveis" data-preco="4000">
+
+                <img src="./imagens/imgs-ex/gold-nintendo-64.webp" alt="gold nintendo 64" class="img-carta"/>
+
+                <div class="informacoes">
+
+                    <h2 class="nome-personagem">
+                        golden nintendo 64
+                    </h2>
+                    <span class="categoria">
+                        Categoria: colecionaveis
+                    </span>
+                    <span class="preco">
+                        R$ 4000,00
+                    </span>
+                    <button class="btn-comprar">
+                        Comprar
+                    </button>
+
+                </div>
+
+            </li>
+
+            <!-- pratos duralex de colecionador -->
+
+            <li class="carta" data-categoria="colecionaveis" data-preco="4000">
+
+                <img src="./imagens/imgs-ex/pratos-duralex.webp" alt="gold nintendo 64" class="img-carta"/>
+
+                <div class="informacoes">
+
+                    <h2 class="nome-personagem">
+                        pratos duralex limitados
+                    </h2>
+                    <span class="categoria">
+                        Categoria: colecionaveis
+                    </span>
+                    <span class="preco">
+                        R$ 600,00
+                    </span>
+                    <button class="btn-comprar">
+                        Comprar
+                    </button>
+
+                </div>
+
+            </li>
+
+            <!-- espada terraria meowmere terraria limitada -->
+
+            <li class="carta" data-categoria="colecionaveis" data-preco="4000">
+
+                <img src="./imagens/imgs-ex/meowmere.webp" alt="gold nintendo 64" class="img-carta"/>
+
+                <div class="informacoes">
+
+                    <h2 class="nome-personagem">
+                        espada meowmere
+                    </h2>
+                    <span class="categoria">
+                        Categoria: colecionaveis
+                    </span>
+                    <span class="preco">
+                        R$ 2900,00
+                    </span>
+                    <button class="btn-comprar">
+                        Comprar
+                    </button>
+
+                </div>
+
+            </li>
+
+        </ul>
+
+
+    </main>
+
+    <!-- rodapé :v-->
+
+    <footer class="rodape">
+        @2025 - todos os direitos reservados
+    </footer>
+
+   <!-- JS >:3 -->
+
+    <script src="./js/index.js"> 
+    </script>
+
+
+</body>
+ 
+</html>
