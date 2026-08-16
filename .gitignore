@@ -1,0 +1,14 @@
+# o que é gerado na máquina de cada um e não sobe pro repo
+
+node_modules/
+
+# o banco é recriado com npm run seed
+*.db
+
+# as imagens que os usuários mandarem
+uploads/*
+!uploads/.gitkeep
+
+# editor e sistema
+.idea/
+.DS_Store
