@@ -229,8 +229,9 @@ Na mudança entraram duas renomeações, as duas por motivo prático:
 
 ## Como contribuir
 
-1. Escolha uma tarefa no [TASKS.md](docs/TASKS.md) (ou uma issue aberta) e se atribua
-   a ela, para ficar registrado o que está em andamento.
+1. Escolha uma [issue aberta](../../issues) e se atribua a ela, para ficar registrado
+   o que está em andamento. As issues estão agrupadas por fase nos milestones, e a
+   ordem dos milestones é a ordem de fazer.
 2. Antes de escrever qualquer linha, abra a tela ou o arquivo que a tarefa cita e
    entenda o que ele faz hoje. O que já existe é o gabarito do que a API tem que
    devolver.
