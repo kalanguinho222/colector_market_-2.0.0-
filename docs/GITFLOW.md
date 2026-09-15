@@ -46,14 +46,14 @@ no imperativo, dizendo o que o commit faz, e cita a issue:
 
 ```bash
 git add .
-git commit -m "Cria a rota GET /api/produtos (issue #7)"
+git commit -m "Cria a rota GET /api/produtos (issue #8)"
 ```
 
 | Boa | Ruim |
 |---|---|
-| `Cria a rota GET /api/produtos (issue #7)` | `alteracoes` |
-| `Corrige o seletor do responsivo (issue #25)` | `agora vai` |
-| `Adiciona bcrypt no cadastro (issue #10)` | `commit` |
+| `Cria a rota GET /api/produtos (issue #8)` | `alteracoes` |
+| `Corrige o seletor do responsivo (issue #26)` | `agora vai` |
+| `Adiciona bcrypt no cadastro (issue #11)` | `commit` |
 
 Se a mensagem precisa de um "e" no meio da frase, provavelmente deviam ser dois commits.
 
@@ -73,12 +73,12 @@ palavras:
 - o que você fez e por quê, em dois ou três parágrafos curtos
 - o que ficou faltando, se ficou
 - como testar, o comando ou o clique exato
-- `Closes #7` na última linha, que é o que **fecha a issue sozinha** quando o PR entrar
+- `Closes #8` na última linha, que é o que **fecha a issue sozinha** quando o PR entrar
 
 Um exemplo de PR bom:
 
 ```
-Fiz a rota do catálogo, a #7. É um GET /api/produtos que devolve os produtos em JSON,
+Fiz a rota do catálogo, a #8. É um GET /api/produtos que devolve os produtos em JSON,
 e aceita ?categoria= e ?precoMax= na URL, que são os mesmos dois filtros que a tela
 já tinha no js/index.js.
 
@@ -88,7 +88,7 @@ statement (aqueles ?), que é o jeito seguro, sem risco de SQL injection.
 Para testar sobe o back com npm start e abre localhost:3000/api/produtos?categoria=pokemon,
 que tem que voltar os 5 produtos de Pokémon do seed.
 
-Closes #7
+Closes #8
 ```
 
 Repara que ele diz o que faz, de onde veio, e como conferir. Ninguém precisa abrir o
