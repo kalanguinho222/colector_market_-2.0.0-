@@ -10,6 +10,14 @@ botaoFiltrar.addEventListener("click", function () {
 
     cartas.forEach(function (carta) {
 
+        function numero(txt) {
+        const limpo = String(txt).trim().replace(/\./g, '').replace(',', '.');
+        if (limpo === '') return null;
+        const n = Number(limpo);
+        return Number.isNaN(n) ? null : n;
+        }
+
+
         const categoriaCarta = carta.dataset.categoria;
         const precoCarta = carta.dataset.preco;
 
