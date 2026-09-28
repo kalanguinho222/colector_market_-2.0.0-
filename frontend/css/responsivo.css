@@ -28,7 +28,7 @@
 
 @media(max-width: 480px) {
 
-    .container .filtros .categorias-cartas, .container .filtros .preco-cartas, .container .filtros .btn-comprar {
+    .container .filtros .categorias-cartas, .container .filtros .preco-cartas, .container .filtros .btn-comprar, .container .filtros .btn-filtrar {
 
         width: 100%;
     }

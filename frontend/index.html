@@ -49,54 +49,55 @@
         <!-- filtro de rarides :j-->
 
         <div class="filtros">
+            <div class="categorias-cartas">
+                <label for="categoria" class="label-categoria"> Categoria  
+                </label>
 
-            <label id="categorias"> Categoria  
-            </label>
+                <!-- raridade ;D-->
 
-           <!-- raridade ;D-->
+                <select id="categoria" class="categorias">
 
-            <select id="categoria" class="categorias">
+                    <option value="">
+                        Selecione Uma Categoria
+                    </option>
 
-                <option value="">
-                    Selecione Uma Categoria
-                </option>
+                    <option value="pokemon">
+                        cartas pokemon
+                    </option>
 
-                <option value="pokemon">
-                    cartas pokemon
-                </option>
+                    <option value="yugioh">
+                        cartas de yugioh
+                    </option>
 
-                <option value="yugioh">
-                    cartas de yugioh
-                </option>
+                    <option value="magic">
+                        cartas de magic
+                    </option>
 
-                <option value="magic">
-                    cartas de magic
-                </option>
+                    <option value="colecionaveis">
+                        items colecionaveis
+                    </option>
 
-                <option value="colecionaveis">
-                    items colecionaveis
-                </option>
+                </select>
+            </div>
+        
 
-            </select>
 
+            <!-- filtro de preco -->
+
+            <div class="preco-cartas">
+
+                <label for="preco"> Preço Máximo (R$)</label>
+
+                <input type="text" id="preco" class="input-preco" placeholder="ex: 5.000,00">
+
+            </div>
+
+            <!-- butão de filtro -->
+
+            <button class="btn-filtrar"> 
+                Aplicar filtros 
+            </button>
         </div>
-
-
-       <!-- filtro de preco -->
-
-        <div class="preco-cartas">
-
-            <label for="preco"> Preço Máximo (R$)</label>
-
-            <input type="text" id="preco" class="input-preco" placeholder="ex: 5.000,00">
-
-        </div>
-
-       <!-- butão de filtro -->
-
-        <button class="btn-filtrar"> 
-            Aplicar filtros 
-        </button>
 
         <!-- CARTAS ;3 -->
     

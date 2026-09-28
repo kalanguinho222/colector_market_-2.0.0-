@@ -131,11 +131,15 @@ body {
 }
 
 select{
-
+    
     background-color: #9c9c9c;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     color: rgb(138, 13, 255);
     transition: 0.5s;
+}
+.label-categoria {
+
+   margin-top: 15px;
 }
 
 /* butaun :3 */
