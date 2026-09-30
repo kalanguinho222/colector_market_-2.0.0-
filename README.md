@@ -250,14 +250,73 @@ ainda, volta e olha de novo.
 
 ## Como rodar
 
-Precisa só de Node.js. Não tem build, não tem framework, não tem bundler.
+Precisa de Node.js 22.5 ou mais novo. Não tem build, não tem framework, não tem
+bundler.
+
+### Testar o banco com o seed
+
+1. Entre na pasta do backend:
 
 ```bash
 cd backend
-npm install
-npm run seed     # cria o banco e põe os 18 produtos do catálogo
-npm start        # http://localhost:3000
 ```
+
+2. Confira a versão do Node.js:
+
+```bash
+node --version
+```
+
+O resultado precisa ser `v22.5.0` ou mais novo.
+
+3. Crie um banco temporário e rode o seed:
+
+```bash
+DB_PATH=/tmp/colector-test.db npm run seed
+```
+
+O resultado esperado é:
+
+```text
+Banco populado: 18 produtos e 2 usuários.
+```
+
+4. Confira os dados inseridos:
+
+```bash
+sqlite3 /tmp/colector-test.db \
+  "SELECT COUNT(*) AS produtos FROM produto;
+   SELECT COUNT(*) AS usuarios FROM usuario;
+   SELECT categoria, COUNT(*) FROM produto GROUP BY categoria ORDER BY categoria;"
+```
+
+O resultado precisa mostrar 18 produtos, 2 usuários e estas quantidades:
+
+```text
+colecionaveis|5
+magic|4
+pokemon|6
+yugioh|3
+```
+
+5. Rode o seed novamente para confirmar que ele não duplica os dados:
+
+```bash
+DB_PATH=/tmp/colector-test.db npm run seed
+sqlite3 /tmp/colector-test.db "SELECT COUNT(*) FROM produto;"
+```
+
+O último comando deve mostrar `18`.
+
+O `DB_PATH` é opcional. Sem ele, o seed usa `backend/market.db`:
+
+```bash
+npm run seed
+```
+
+Nesse caso, o banco local do projeto será apagado e recriado com os dados de teste.
+O comando pode ser executado mais de uma vez: ele sempre volta para 2 usuários e
+18 produtos.
 
 Abra **http://localhost:3000**. O Express serve a pasta `frontend/`, então o `/` cai no
 `frontend/index.html` e a API responde no mesmo endereço, em `/api/...`.
@@ -265,4 +324,5 @@ Abra **http://localhost:3000**. O Express serve a pasta `frontend/`, então o `/
 O `market.db` e o conteúdo de `uploads/` não são versionados. Cada um tem o seu banco
 local, e o `npm run seed` recria ele quando precisar.
 
-**Requisitos:** Node 20 ou mais novo.
+**Requisitos:** Node.js 22.5 ou mais novo. O comando `sqlite3` só é necessário
+para a etapa de conferência; o `npm run seed` usa o SQLite integrado ao Node.js.
