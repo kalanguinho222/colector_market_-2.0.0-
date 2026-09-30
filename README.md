@@ -255,24 +255,10 @@ bundler.
 
 ### Testar o banco com o seed
 
-1. Entre na pasta do backend:
+1. Rode o seed usando o banco padrão `backend/market.db`:
 
 ```bash
-cd backend
-```
-
-2. Confira a versão do Node.js:
-
-```bash
-node --version
-```
-
-O resultado precisa ser `v22.5.0` ou mais novo.
-
-3. Crie um banco temporário e rode o seed:
-
-```bash
-DB_PATH=/tmp/colector-test.db npm run seed
+cd backend && npm run seed
 ```
 
 O seed verifica sozinho o total de registros e as categorias. O resultado esperado
@@ -286,19 +272,19 @@ pokemon: 6
 yugioh: 3
 ```
 
-4. Rode o seed novamente para confirmar que ele não duplica os dados:
+2. Confira a versão do Node.js:
+
+```bash
+node --version
+```
+
+O resultado precisa ser `v22.5.0` ou mais novo.
+
+Para um teste isolado, é possível usar outro arquivo SQLite com `DB_PATH`. Essa é uma
+opção avançada, não necessária para o teste principal:
 
 ```bash
 DB_PATH=/tmp/colector-test.db npm run seed
-```
-
-O resultado precisa ser igual ao da primeira execução. O próprio seed interrompe
-com erro se a quantidade de registros ou categorias estiver errada.
-
-O `DB_PATH` é opcional. Sem ele, o seed usa `backend/market.db`:
-
-```bash
-npm run seed
 ```
 
 Nesse caso, o banco local do projeto será apagado e recriado com os dados de teste.
