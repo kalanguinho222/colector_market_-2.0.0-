@@ -1,8 +1,8 @@
 .body-cadastro {
     
-    margin: 100px;
+    min-height: 100vh;
     display: flex;
-    justify-content: flex;
+    justify-content: center;
     align-items: center;
 
     background: linear-gradient(160deg, rgb(16, 0, 107), rgba(83, 0, 192, 0.801));
@@ -26,17 +26,15 @@
     align-items: center;
     justify-content: center;
     background-color: #f0f0f0;
-    min-width: 320px;
-    height:550px;
+    width: calc(100% - 32px);
+    min-height: 550px;
     transition: 1s;
     border-radius: 45px;
     border: 2px solid #9308d4c9;
     box-shadow: 6px 3px 10px rgba(0, 0, 0, 0.267);
     background: linear-gradient(160deg, rgb(15, 0, 80), rgb(15, 15, 15));
 
-    position: absolute;
-    top:9vw;
-    left:42vw;
+    max-width: 800px;
 
     z-index: 3;
 

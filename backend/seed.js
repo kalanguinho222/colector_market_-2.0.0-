@@ -60,7 +60,29 @@ try {
     }
 
     const total = database.prepare('SELECT COUNT(*) AS total FROM produto').get().total;
-    console.log(`Banco populado: ${total} produtos e 2 usuários.`);
+    const users = database.prepare('SELECT COUNT(*) AS total FROM usuario').get().total;
+    const categories = database.prepare(`
+        SELECT categoria, COUNT(*) AS total
+        FROM produto
+        GROUP BY categoria
+        ORDER BY categoria
+    `).all();
+    const expectedCategories = [
+        { categoria: 'colecionaveis', total: 5 },
+        { categoria: 'magic', total: 4 },
+        { categoria: 'pokemon', total: 6 },
+        { categoria: 'yugioh', total: 3 }
+    ];
+
+    if (total !== products.length || users !== 2 ||
+        JSON.stringify(categories) !== JSON.stringify(expectedCategories)) {
+        throw new Error('A verificação do seed falhou.');
+    }
+
+    console.log(`Banco populado: ${total} produtos e ${users} usuários.`);
+    categories.forEach(({ categoria, total: categoryTotal }) => {
+        console.log(`${categoria}: ${categoryTotal}`);
+    });
 } finally {
     database.close();
 }

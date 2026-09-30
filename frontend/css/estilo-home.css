@@ -1,11 +1,20 @@
 .body-home {
-    
-
+    min-height: 100vh;
     background: linear-gradient(160deg, rgb(16, 0, 107), rgba(83, 0, 192, 0.801));
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 
+}
+
+.body-home .container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 32px;
 }
 
 .container-bemvindo {
@@ -16,22 +25,15 @@
     align-items: center;
     justify-content: center;
     background-color: #f0f0f0;
-    min-width: 320px;
-    height:550px;
+    width: min(800px, 100%);
+    min-height: 550px;
     transition: 1s;
     border-radius: 45px;
     border: 2px solid #9308d4c9;
     box-shadow: 6px 3px 10px rgba(0, 0, 0, 0.267);
     background: linear-gradient(160deg, rgb(15, 0, 80), rgb(15, 15, 15));
 
-    position: absolute;
-
-    top:9vw;
-    left:42vw;
-
-    flex-grow: 1;
-
-    z-index: 3;
+    flex: 1 1 520px;
 
 
 }
@@ -154,7 +156,7 @@
 
 .img-urutau, .img-aguiacareca {
 
-    width: 320px;
+    width: min(320px, 100%);
     height: 420px;
     border-radius: 40px;
     transition: 0.9s;
@@ -165,7 +167,7 @@
 
 .img-bemtevi, .img-sangue-de-boi{
 
-    width: 370px;
+    width: min(370px, 100%);
     height: 470px;
     border-radius: 40px;
     transition: 0.9s;
@@ -176,48 +178,27 @@
 
 .img-bemtevi {
 
-
-    position: absolute;
     align-self: center;
-    top:11vw;
-    left:25vw;
-    
-    z-index: 2;
-    flex-grow: 1;
+    flex: 1 1 260px;
 
 }
 
 .img-sangue-de-boi {
 
-    flex-grow: 1;
-    position: absolute;
     align-self: center;
-    top:11vw;
-    left:56.5vw;
-    
-    z-index: 2;
+    flex: 1 1 260px;
 }
 
 .img-urutau {
 
-    flex-grow: 1;
-    position: absolute;
     align-self: center;
-    top:12.3vw;
-    left:12vw;
-    
-    z-index: 1;
+    flex: 1 1 220px;
 }
 
 .img-aguiacareca {
 
-    flex-grow: 1;
-    position: absolute;
     align-self: center;
-    top:12.3vw;
-    left:72vw;
-    
-    z-index: 1;
+    flex: 1 1 220px;
 }
 
 .img-urutau:hover, .img-aguiacareca:hover, .img-bemtevi:hover, .img-sangue-de-boi:hover {

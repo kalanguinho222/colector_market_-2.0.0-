@@ -2,24 +2,28 @@
 
 const botaoFiltrar = document.querySelector('.btn-filtrar');
 
+function numero(txt) {
+    const limpo = String(txt).trim().replace(/\./g, '').replace(',', '.');
+    if (limpo === '') return null;
+    const n = Number(limpo);
+    return Number.isNaN(n) ? null : n;
+}
+
 botaoFiltrar.addEventListener("click", function () {
 
     const categoriaSelecionada = document.querySelector('#categoria').value;
     const precoMaximoSelecionado = document.querySelector('#preco').value;
+    const precoMaximo = numero(precoMaximoSelecionado);
     const cartas = document.querySelectorAll('.carta');
 
+    if (precoMaximoSelecionado.trim() !== '' && precoMaximo === null) {
+        alert('Digite o preço no formato 5.000,00.');
+        return;
+    }
+
     cartas.forEach(function (carta) {
-
-        function numero(txt) {
-        const limpo = String(txt).trim().replace(/\./g, '').replace(',', '.');
-        if (limpo === '') return null;
-        const n = Number(limpo);
-        return Number.isNaN(n) ? null : n;
-        }
-
-
         const categoriaCarta = carta.dataset.categoria;
-        const precoCarta = carta.dataset.preco;
+        const precoCarta = numero(carta.dataset.preco);
 
         let mostrarCarta = true;
 
@@ -33,7 +37,7 @@ botaoFiltrar.addEventListener("click", function () {
 
         }
 
-        if (precoMaximoSelecionado !== '' && parseFloat(precoCarta) > parseFloat(precoMaximoSelecionado)) {
+        if (precoMaximo !== null && precoCarta > precoMaximo) {
 
             mostrarCarta = false;
 
@@ -55,4 +59,3 @@ botaoFiltrar.addEventListener("click", function () {
     });
 
 });
-
