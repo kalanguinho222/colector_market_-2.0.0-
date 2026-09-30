@@ -1,0 +1,10 @@
+{
+  "name": "colector-market-backend",
+  "private": true,
+  "scripts": {
+    "seed": "node seed.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}

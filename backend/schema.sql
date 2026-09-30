@@ -1,3 +1,5 @@
+PRAGMA foreign_keys = ON;
+
 CREATE TABLE IF NOT EXISTS usuario (
     id       INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT NOT NULL UNIQUE,
@@ -12,3 +14,5 @@ CREATE TABLE IF NOT EXISTS produto (
     img        TEXT    NOT NULL,
     dono       INTEGER NOT NULL REFERENCES usuario(id)
 );
+
+CREATE INDEX IF NOT EXISTS idx_produto_dono ON produto(dono);
