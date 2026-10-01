@@ -1,0 +1,22 @@
+@url = http://localhost:3000
+
+### O servidor está no ar?
+GET {{url}}/api/ping
+
+### O catálogo inteiro (tem que vir 18)
+GET {{url}}/api/produtos
+
+### Só pokemon (tem que vir 6)
+GET {{url}}/api/produtos?categoria=pokemon
+
+### Até 800 reais
+GET {{url}}/api/produtos?precoMax=800
+
+### Um produto
+GET {{url}}/api/produtos/1
+
+### Um produto que não existe (tem que dar 404)
+GET {{url}}/api/produtos/999
+
+### Tentativa de SQL injection (tem que voltar lista vazia)
+GET {{url}}/api/produtos?categoria=' OR 1=1 --
